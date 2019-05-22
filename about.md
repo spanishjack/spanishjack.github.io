@@ -3,13 +3,24 @@ layout: page
 title: About
 permalink: /about/
 ---
+![Data Pipeline]({{ site.url }}/images/sf_gg.png)
+### Hometown
+San Francisco Bay Area
 
-Some information about you!
+&nbsp; 
 
-### More Information
+### Interests
+Technology, economics, data engineering, retail
 
-A place to include any other types of information that you'd like to include about yourself.
+&nbsp; 
+
+### Random Info
+1. Favorite Running Shoe: Nike Zoom Fly
+2. Current Deadlift 1RM: 405lb - Oct2018
+3. LoL Main: Darius
+
+&nbsp; 
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[huck.joseph@gmail.com](mailto:huck.joseph@gmail.com)
