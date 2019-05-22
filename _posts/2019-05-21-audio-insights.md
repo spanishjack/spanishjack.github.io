@@ -11,7 +11,7 @@ tags:
 
 Interested in learning how to build a simple speech-to-text data pipeline in a few lines of code? Want to learn how to generate a beautiful data visualization to get insights into a speech or text? This article is for you.
 
-I'll walk thru how to build a speech recognition data pipeline using python and the Google Clouds speech-to-text API. We'll touch on the basics of working with a network graph as we build out our data model. And we’ll finish off by generating data visualizations using Gephi.
+I'll walk thru how to build a speech recognition data pipeline using python and the Google Cloud speech-to-text API. We'll touch on the basics of working with a network graph as we build out our data model. And we’ll finish off by generating data visualizations using Gephi.
 
 By the end of this post, you'll learn how to take text and generate a network graph like the image below.
 
