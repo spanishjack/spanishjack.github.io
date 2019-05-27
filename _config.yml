@@ -41,7 +41,7 @@ footer-links:
   email: huck.joseph@gmail.com
   facebook:
   flickr:
-  github: 
+  github: https://github.com/spanishjack
   googleplus: # anything in your profile username that comes after plus.google.com/
   instagram:
   linkedin: josephhuck
@@ -60,7 +60,7 @@ footer-text: © Joseph Huck
 disqus: # <username>.disqus.com
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+google_analytics: UA-140936246-1
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
