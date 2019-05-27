@@ -11,17 +11,19 @@ tags:
 
 Interested in learning how to build a simple speech-to-text data pipeline in a few lines of code? Want to learn how to generate a beautiful data visualization to get insights into a speech or text? This article is for you.
 
-I'll walk thru how to build a speech recognition data pipeline using python and the Google Cloud speech-to-text API. We'll touch on the basics of working with a network graph as we build out our data model. And we’ll finish off by generating data visualizations using Gephi.
+I'll walk thru how to build a speech recognition data pipeline using python and the Google Clouds speech-to-text API. We'll touch on the basics of building a network graph from a text data source. And we’ll finish off by generating data visualizations using Gephi.
 
-By the end of this post, you'll learn how to take text and generate a network graph like the image below.
-
+By the end of this article you'll be able to generate neat graphs like the image below.
 ![Data Pipeline]({{ site.url }}/images/speech_graph.png)
 
 # Backstory
 
-I attended the 2019 Gartner Data & Analytics Summit in Orlando. Awesome conference, great content. But a bit of brain overload after 4 days of sessions. After the conference, I was at the airport waiting for my flight to SFO. Catching up on email and reviewing my notes. I began working on wrangling my notes into something coherent I could share with my team. I started with trying to outline the main themes of the keynote presentation.
+After attending the [2019 Gartner Data & Analytics Summit](https://www.gartner.com/en/conferences/na/data-analytics-us), I was at the airport waiting for my flight back to SFO. I began wrangling my notes into something coherent I could share with my team back at the office.
 
-I had my notes, screen shots, and an mp3 audio file of the keynote speech. It would be cool if I could auto-summarize the keynote using the audio. Or even better, produce a cool data-viz capturing the major themes of the keynote. Anything's better than parsing thru old notes and transcribing audio by hand. This started me down the path of building a speech-to-text data pipeline.
+I started with trying to outline the main themes of the keynote presentation. I had my notes, screen shots, and an mp3 audio file of the keynote speech. I didn't want to listen to the entire keynote again, but my notes weren't great. So I started playing with speech-to-text API's to see if there was an easy way to transcribe the audio. After a few hours a had a simple speech-to-text analytics pipeline working.
+
+Hopefully this walkthru will save people some time if they've got a similar use case.
+
 
 # Data Pipeline Overview
 ![Data Pipeline]({{ site.url }}/images/pipeline.png)
@@ -29,9 +31,9 @@ I had my notes, screen shots, and an mp3 audio file of the keynote speech. It wo
 Here are the high level steps we'll go thru to build out our data pipeline:
 + **Acquire the data.** Extracting audio from a youtube video via the youtube API.
 + **Audio processing.** Converting audio into wav format and converting to mono.
-+ **Speech-to-text transcription.** Using Google Cloud services, we'll transcribe our audio speech into text.
-+ **Data enrichment.** Sentence and word tokenization. Text analytics. Data transformations.
-+ **Graph model.** Ingesting our data into a network graph model. Performing network transformations and statistics.
++ **Speech-to-text transcription.** Using Google Cloud services, we'll transcribe the audio speech into text.
++ **Data enrichment.** Perform sentence and word tokenization. Text analytics. Data transformations.
++ **Graph model.** Ingesting data into a network data model. Performing network transformations and statistics.
 + **Visualization.** Viewing and creating a data visualization of our network model in Gephi.
 
 # Prerequisites
@@ -90,7 +92,7 @@ pip install YOUR_PACKAGE_NAME
 + youtube-dl==2019.4.30
 
 
-## Getting the Audio
+# Getting the Audio
 The first step is to find an audio file that you wish to transcribe. For this article, we'll use the [JFK moon speech](https://www.youtube.com/watch?v=ouRbkBAOGEw). I choose this audio source for a few reasons:
 + The text transcript is available and can be used to cross check the speech to text output for accuracy
 + The audio quality is not 100%, and I wanted to see how this would impact the text to speech transcription
@@ -106,6 +108,8 @@ Just replace the youtube URL with the video URL you wish to process.
 from __future__ import unicode_literals
 import youtube_dl
 
+video_url='https://www.youtube.com/watch?v=ouRbkBAOGEw'
+
 ydl_opts = {
     'format': 'bestaudio/best',
     'postprocessors': [{
@@ -115,19 +119,19 @@ ydl_opts = {
     }],
 }
 with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-    ydl.download(['https://www.youtube.com/watch?v=ouRbkBAOGEw'])
+    ydl.download([video_url])
 ```
 
     [youtube] ouRbkBAOGEw: Downloading webpage
     [youtube] ouRbkBAOGEw: Downloading video info webpage
-    [youtube] ouRbkBAOGEw: Downloading js player vflOR94oD
+    [youtube] ouRbkBAOGEw: Downloading js player vflusCuE1
 
 
     WARNING: unable to extract channel id; please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; see  https://yt-dl.org/update  on how to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.
 
 
     [download] Destination: JFK - We choose to go to the Moon, full length-ouRbkBAOGEw.m4a
-    [download] 100% of 16.18MiB in 00:0237MiB/s ETA 00:001
+    [download] 100% of 16.18MiB in 00:0161MiB/s ETA 00:007
     [ffmpeg] Correcting container in "JFK - We choose to go to the Moon, full length-ouRbkBAOGEw.m4a"
     [ffmpeg] Destination: JFK - We choose to go to the Moon, full length-ouRbkBAOGEw.mp3
     Deleting original file JFK - We choose to go to the Moon, full length-ouRbkBAOGEw.m4a (pass -k to keep)
@@ -138,26 +142,26 @@ The next step is to prepare the audio file for text transcription. Our mp3 audio
 
 
 ```python
+import os
 import pydub
 from pydub import AudioSegment
 
-directory_path=PATH_TO_YOUR_DIRECTORY
-file_name='JFK - We choose to go to the Moon, full length-ouRbkBAOGEw'
-input_format='mp3'
-output_format='wav'
+directory_path = '/Users/jhuck/Documents/text_to_speech'
+input_file_name = 'JFK - We choose to go to the Moon, full length-ouRbkBAOGEw.mp3'
+output_file_name = 'JFK - We choose to go to the Moon, full length-ouRbkBAOGEw.wav'
 
 #initialize our audio segment and set channels to mono
-audio = AudioSegment.from_file(directory_path + file_name + '.' + inputformat ,format = input_format)
+audio = AudioSegment.from_file(os.path.join(directory_path, input_file_name), format = 'mp3')
 audio = audio.set_channels(1)
 
 #export audio to wav format
-audio.export(directory_path + file_name + '.' + output_format, format = output_format)
+audio.export(os.path.join(directory_path, output_file_name), format = 'wav')
 ```
 
 
 
 
-    <_io.BufferedRandom name='/Users/jhuck/Downloads/JFK - We choose to go to the Moon, full length-ouRbkBAOGEw.wav'>
+    <_io.BufferedRandom name='/Users/jhuck/Documents/text_to_speech/JFK - We choose to go to the Moon, full length-ouRbkBAOGEw.wav'>
 
 
 
@@ -185,7 +189,7 @@ Before accessing the Google Cloud API's, you need to setup the credentials on yo
 
 ```python
 import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = directory_path + YOUR_API_JSON_FILE
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.path.join(directory_path, 'My First Project-02d9aeddc2f8.json')
 ```
 
 # Upload File to Google Cloud
@@ -210,12 +214,12 @@ def upload_blob(bucket_name, source_file_name, destination_blob_name):
 
 
 ```python
-gc_storage_bucket=YOUR_STORAGE_BUCKET_NAME
+gc_storage_bucket_name = your_storage_bucket_name
 
-upload_blob(gc_storage_bucket ,directory_path + file_name + '.' + output_format ,file_name + '.' + output_format)
+upload_blob(gc_storage_bucket_name ,os.path.join(directory_path, output_file_name) ,output_file_name)
 ```
 
-    File /Users/jhuck/Downloads/JFK - We choose to go to the Moon, full length-ouRbkBAOGEw.wav uploaded to JFK - We choose to go to the Moon, full length-ouRbkBAOGEw.wav.
+    File /Users/jhuck/Documents/text_to_speech/JFK - We choose to go to the Moon, full length-ouRbkBAOGEw.wav uploaded to JFK - We choose to go to the Moon, full length-ouRbkBAOGEw.wav.
 
 
 Use Google Console to confirm the file has been uploaded. 
@@ -228,7 +232,7 @@ At this point we're ready to invoke the Speech-to-Text API and transcribe our au
 I've hardcoded the timeout variable to 400 seconds. To productionalize this you'd want to setup a polling function to keep checking for results from the API call. If you get any errors due to timeout, try upping the timeout variable. For reference 400 seconds was long enough to transcribe 20 minutes of audio.
 
 ## Punctuation
-I've set the flag for punctuation to True. The API will attempt to return punctuation such as periods, commas, etc . We'll use the punctuation during the text processing steps.
+I've set the flag for punctuation to true. The API will attempt to add punctuation such as periods, commas, etc . We'll use the punctuation during the text processing steps.
 
 
 ```python
@@ -241,13 +245,13 @@ def transcribe_gcs(gcs_uri):
 
     audio = types.RecognitionAudio(uri=gcs_uri)
     config = types.RecognitionConfig(
-        encoding=enums.RecognitionConfig.AudioEncoding.LINEAR16,
+        encoding = enums.RecognitionConfig.AudioEncoding.LINEAR16,
         #sample_rate_hertz=16000,
         language_code='en-US',
         enable_automatic_punctuation=True)
 
     operation = client.long_running_recognize(config, audio)
-    return_list=[]
+    return_list = []
     print('Waiting for operation to complete...')
     response = operation.result(timeout=400)
 
@@ -264,7 +268,7 @@ def transcribe_gcs(gcs_uri):
 
 
 ```python
-audio_file_uri = 'gs://' + gc_storage_bucket + '/' + file_name + '.' + output_format
+audio_file_uri = 'gs://' + gc_storage_bucket + '/' + output_file_name
 
 output_text = transcribe_gcs(audio_file_uri)
 ```
@@ -280,15 +284,14 @@ output_text = transcribe_gcs(audio_file_uri)
     Confidence: 0.7495774626731873
     Transcript:  sinus sting which gas at ladies and gentlemen, I appreciate you your president having made me an honorary visiting professor and I will assure you that my first light you will be a very brief. I am delighted to be here and I'm particularly delighted to be here on this occasion.
 
-
 After you get the transcription text back, save it to a local file. You'll notice that a confidence measure is provided for each text transcription. Overall, the Google API did a good job of transcribing the speech. But there are definitely mistakes comparing to the hand transcribed sources. This is probably due to the low quality audio source. The audio contains recording artifacts and noise that make transcribing the speech difficult. 
 
 The confidence measure could be used to identify and filter out low quality results. For our purposes, we’ll keep all of the audio transcription text the API generated.
 
 
 ```python
-output_file_name = 'jfk_moon.txt'
-with open(directory_path + output_file_name, 'w') as f:
+text_file_name = 'jfk_moon.txt'
+with open(os.path.join(directory_path, text_file_name), 'w') as f:
     for x in output_text:
         f.write("%s\n" % x)
 ```
@@ -319,15 +322,13 @@ import nltk
 from nltk.tokenize import sent_tokenize
 
 #break out text into sentances
-sentence_list=[]
+sentence_list = []
 
-n=0
-
-for i in output_text:
-    if '.' not in i:
-        sentence_list.append(i.strip())
+for line in output_text:
+    if '.' not in line:
+        sentence_list.append(line.strip())
     else:
-        sent = sent_tokenize(i)
+        sent = sent_tokenize(line)
         for x in sent:
             sentence_list.append(x.strip())
 ```
@@ -344,6 +345,7 @@ print(sentence_list[:10])
 
 ## Word Tokenization
 The next step is to further break down our sentences into individual words (tokens). Also, we want to add attribution to our words to identify the word class (noun, verb, punctuation, etc). Then we're going to do a few data wrangling steps to cleanup and filter the data remove unwanted data points.
+
 
 ### Stopwords
 To extract the major themes from the text, we want to eliminate as much noise in the data as possible. One way to reduce noise is to filter out common "stopwords" like : a, for, so, etc . For our analysis, stop words will not add value and will be removed.
@@ -375,25 +377,26 @@ stop_words = set(stopwords.words('english'))
 word_types = ['NOUN']
 words_to_keep = ['united-states']
 
-r=0
+record_count = 0
 
-for x in sentence_list:
-    tokenized_text = nltk.word_tokenize(x)
-    tagged_and_tokenized_text = nltk.pos_tag(tokenized_text,tagset='universal')
-
+for line in sentence_list:
+    tokenized_text = nltk.word_tokenize(line)
     
-    for i in tagged_and_tokenized_text:
-        i = [re.sub('[^a-zA-Z]+', '', i[0]),i[1]]
+    #tokenized text is array with format [word, word type]
+    tagged_and_tokenized_text = nltk.pos_tag(tokenized_text,tagset='universal') 
+
+    for token in tagged_and_tokenized_text:
         
-        if (i[1] in word_types and i[0] not in stop_words and len(i[0])>1) or i[0] in words_to_keep:
-            if len(i[0].lower().replace('\'','').strip('\"').replace('"','')) > 1:
-                word_list.append([r,lemmatizer.lemmatize(i[0]).lower().replace('\'','').strip('\"').replace('"','')])
-            else:
-                word_exclude_list.append([r,i])
+        #For my use case i remove all non-alpha characters and lowered the text for uniformity. Modify for your use case
+        token = [re.sub('[^a-zA-Z]+', '', token[0]).lower(),token[1]]
+        
+        if (token[1] in word_types and token[0] not in stop_words and len(token[0]) > 1) or token[0] in words_to_keep:
+            word_list.append([record_count,lemmatizer.lemmatize(token[0])])
+
         else:
-            word_exclude_list.append([r,i])
+            word_exclude_list.append([record_count,token])
         
-    r+=1
+    record_count += 1
 ```
 
 
@@ -429,28 +432,31 @@ We're going to use the itertools module to help with this step.
 import itertools as it
 import numpy as np
 
-node_edge_list= []
+node_edge_list = []
 node_list = []
 
-n=0
+record_count = 0
 
-while n <= len(word_list):
-    sentence = ([row for row in word_list if n == row[0]])
+for word in word_list:
+    sentence = ([row for row in word_list if record_count == row[0]])
 
     temp_list = []
     
-    for x in sentence:
-        temp_list.append(x[1])
+    for token in sentence:
+        temp_list.append(token[1])
 
     temp_cartesian_list = list(it.combinations(temp_list, 2))
 
     for i in temp_cartesian_list: 
         node_edge_list.append(i)
-    n+=1
+        
+    record_count += 1
 
-#sort the list to make sure column 1 is always < column 2. That way we can guarantee a unique set of pairs
+#Sort the list to make sure column 1 is always < column 2 regarding sort.
+#Example, we don't want to count [(1,2), (2,1)]. We want [(1,2), (1,2)]
+#This will impact the step when we aggregate the pairs to calculate the edge weights.
 node_edge_list_array = np.array(node_edge_list)
-node_edge_list_sorted_array = np.sort(node_edge_list_array,axis=1)
+node_edge_list_sorted_array = np.sort(node_edge_list_array, axis=1)
 node_edge_list = node_edge_list_sorted_array.tolist()
 
 temp_node_list = []
@@ -498,9 +504,7 @@ print(output_edge_list_with_counts[:10])
 
 
 ## Create the Graph
-At this point we're ready to push our node/edge array into a tool to generate the network. We'll also run a check the network info to see the number of edges and nodes. As a sanity check, the number of nodes should tie out to the size of your word array.
-
-We're going to use the networkx module to generate the network.
+At this point we're ready to generate the network from our node/edge array. We're going to use the networkx module to generate the network.
 
 
 ```python
@@ -509,16 +513,16 @@ import networkx as nx
 undirected_weighted_graph = nx.Graph()
 
 for i in output_edge_list_with_counts:
-    undirected_weighted_graph.add_edge(i[0],i[1], weight=i[2])
+    undirected_weighted_graph.add_edge(i[0], i[1], weight = i[2])
     
 print(nx.info(undirected_weighted_graph))
 ```
 
     Name: 
     Type: Graph
-    Number of nodes: 352
-    Number of edges: 2741
-    Average degree:  15.5739
+    Number of nodes: 347
+    Number of edges: 2706
+    Average degree:  15.5965
 
 
 ## Graph Partitioning
@@ -540,7 +544,7 @@ We're done wrangling data. Onto the visualization steps. Since we intend to use 
 
 ```python
 output_file_name = 'network_output.gexf' 
-nx.write_gexf(undirected_weighted_graph, PATH_TO_YOUR_DIRECTORY + output_file_name)
+nx.write_gexf(undirected_weighted_graph, os.path.join(directory_path, output_file_name))
 ```
 
 # Data Visualization
@@ -573,19 +577,27 @@ After your done, click preview again. You should now have a graph output similar
 
 ![Network5]({{ site.url }}/images/network5.png)
 
-At this point you've got a cool looking network visualization. You can start digging in to find insights about the text. Try playing with the various filters to reduce noise. For large texts, filtering out nodes based on their [degree](https://en.wikipedia.org/wiki/Degree_distribution) or centrality can help to reduce clutter and noise.
+At this point you've got a cool looking network visualization. You can start digging in to find insights about the text. Try playing with the various filters to reduce noise. For large texts, filtering out nodes based on their [degree](https://en.wikipedia.org/wiki/Degree_distribution) or centrality can help to reduce graph clutter. For networks with a lage number of nodes, filters are your friend.
 
 # Wrap Up
-Speech driven apps like alexa and siri are continuing to grow in popularity and demand for analytics pipelines involving audio as a data source will also ramp up. There's a ton of potential for innovation in the space. Especially with streaming functionality.
+This is the first time I've worked with Gephi and the Google Cloud speech-to-text API. Both were fun to use and it was a great learning exercise. I've run several texts and audio sources thru this process and gotten some cool results. Viewing text as a network diagram opens up new pathways for insights. It's a different experience viewing a text or speech as a network graph. Easy to visually identify key themes using modularity clustering.
 
-This is the first time I've worked with Gephi, and it's fun to use. I've run several texts and audio sources thru this process and I've gotten some cool results. Viewing text as a network diagram opens up new pathways for insights. It's a different experience viewing a text or speech as a network graph. 
+Speech driven apps like Alexa and Siri are continuing to grow in popularity. Demand for analytics pipelines involving audio as a data source will also ramp up. There's a ton of potential for innovation in the space. Especially with streaming functionality. I'm excited to keep playing around with these tools.
 
-For reference, here's network visualizations for two state of the union addresses. Both filtered for top 80 nodes based on average weighted degree to reduce the network size. I used these for testing. Interesting to see the differences and similarities between two speeches delivered over 100 years apart.
+For reference, here's the full data viz image from the JFK moon speech.
 
-### 1864 - Lincoln
-![Network5]({{ site.url }}/images/sotu_lincoln_1864.png)
+![Network5]({{ site.url }}/images/jfk_moon_network2.png)
 
-### 2019 - Trump
-![Network5]({{ site.url }}/images/sotu_trump_2019.png)
+You can access the code used in this post at my github repo located [here](https://github.com/spanishjack/speechtotext).
+
+## References
+Here's a list of reference material I found helpful to get up to speed on speech-to-text, network graphs, and gephi.
++ [realpython.com/python-speech-recognition/](https://realpython.com/python-speech-recognition/)
++ [analyticsvidhya.com/blog/2018/11/introduction-text-summarization-textrank-python/](https://www.analyticsvidhya.com/blog/2018/11/introduction-text-summarization-textrank-python/)
++ [cloud.google.com/speech-to-text/docs/](https://cloud.google.com/speech-to-text/docs/)
++ [towardsdatascience.com/textrank-for-keyword-extraction-by-python-c0bae21bcec0](https://towardsdatascience.com/textrank-for-keyword-extraction-by-python-c0bae21bcec0)
++ [analyticsvidhya.com/blog/2018/04/introduction-to-graph-theory-network-analysis-python-codes/](https://www.analyticsvidhya.com/blog/2018/04/introduction-to-graph-theory-network-analysis-python-codes/)
++ [harangdev.github.io/applied-data-science-with-python/applied-social-network-analysis-in-python/1/](https://harangdev.github.io/applied-data-science-with-python/applied-social-network-analysis-in-python/1/)
++ [neo4j.com/docs/graph-algorithms/current/algorithms/louvain/](https://neo4j.com/docs/graph-algorithms/current/algorithms/louvain/)
 
 Thanks for reading the post. Feel free to contact me with any feedback or questions.

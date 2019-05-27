@@ -15,7 +15,7 @@ Technology, economics, data engineering, retail
 &nbsp; 
 
 ### Random Info
-1. Favorite Running Shoe: Nike Zoom Fly
+1. Favorite Running Shoes: New Balance 1400v6, Nike Zoom Fly
 2. Current Deadlift 1RM: 405lb - Oct2018
 3. LoL Main: Darius
 
