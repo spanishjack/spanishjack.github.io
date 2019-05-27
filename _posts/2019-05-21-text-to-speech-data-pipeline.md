@@ -20,10 +20,13 @@ By the end of this article you'll be able to generate neat graphs like the image
 
 After attending the [2019 Gartner Data & Analytics Summit](https://www.gartner.com/en/conferences/na/data-analytics-us), I was at the airport waiting for my flight back to SFO. I began wrangling my notes into something coherent I could share with my team back at the office.
 
-I started with trying to outline the main themes of the keynote presentation. I had my notes, screen shots, and an mp3 audio file of the keynote speech. I didn't want to listen to the entire keynote again, but my notes weren't great. So I started playing with speech-to-text API's to see if there was an easy way to transcribe the audio. After a few hours a had a simple speech-to-text analytics pipeline working.
+I started with trying to outline the main themes of the keynote presentation. I had my notes, screen shots, and an mp3 audio file of the keynote speech. I didn't want to listen to the entire keynote again, but my notes weren't great. So I started playing with speech-to-text API's to see if there was an easy way to transcribe the audio.
 
-Hopefully this walkthru will save people some time if they've got a similar use case.
+After getting the text transcribed, I still needed a way to extract key themes. I really liked the visualizations generated from texts at [texttexture](http://textexture.com/). So I started reading up on network graphs and how to produce network visualizations.
 
+After a few hours I had a simple speech-to-text analytics pipeline working. It was a fun exercise and I was able to produce something neat to share with my team.
+
+Hopefully this walkthru will save people time if they've got a similar use case.
 
 # Data Pipeline Overview
 ![Data Pipeline]({{ site.url }}/images/pipeline.png)
@@ -290,10 +293,11 @@ The confidence measure could be used to identify and filter out low quality resu
 
 
 ```python
-text_file_name = 'jfk_moon.txt'
-with open(os.path.join(directory_path, text_file_name), 'w') as f:
-    for x in output_text:
-        f.write("%s\n" % x)
+output_text_file_name = 'jfk_moon.txt'
+
+with open(os.path.join(directory_path, output_text_file_name), 'w') as f:
+    for line in output_text:
+        f.write("%s\n" % line.strip())
 ```
 
 # Text Processing
@@ -580,7 +584,7 @@ After your done, click preview again. You should now have a graph output similar
 At this point you've got a cool looking network visualization. You can start digging in to find insights about the text. Try playing with the various filters to reduce noise. For large texts, filtering out nodes based on their [degree](https://en.wikipedia.org/wiki/Degree_distribution) or centrality can help to reduce graph clutter. For networks with a lage number of nodes, filters are your friend.
 
 # Wrap Up
-This is the first time I've worked with Gephi and the Google Cloud speech-to-text API. Both were fun to use and it was a great learning exercise. I've run several texts and audio sources thru this process and gotten some cool results. Viewing text as a network diagram opens up new pathways for insights. It's a different experience viewing a text or speech as a network graph. Easy to visually identify key themes using modularity clustering.
+This is the first time I've worked with Gephi and the Google Cloud speech-to-text API. Both were fun to use and it was a great learning exercise. I've run several texts and audio sources thru this process and gotten some cool results. Viewing text as a network diagram opens up new pathways for insights. Viewing text as a network graph makes it easy to visually identify key themes.
 
 Speech driven apps like Alexa and Siri are continuing to grow in popularity. Demand for analytics pipelines involving audio as a data source will also ramp up. There's a ton of potential for innovation in the space. Especially with streaming functionality. I'm excited to keep playing around with these tools.
 
@@ -590,8 +594,8 @@ For reference, here's the full data viz image from the JFK moon speech.
 
 You can access the code used in this post at my github repo located [here](https://github.com/spanishjack/speechtotext).
 
-## References
-Here's a list of reference material I found helpful to get up to speed on speech-to-text, network graphs, and gephi.
+# References
+Here's a list of reference material I found helpful to get up to speed on speech-to-text, network graphs, text analytics, and Gephi.
 + [realpython.com/python-speech-recognition/](https://realpython.com/python-speech-recognition/)
 + [analyticsvidhya.com/blog/2018/11/introduction-text-summarization-textrank-python/](https://www.analyticsvidhya.com/blog/2018/11/introduction-text-summarization-textrank-python/)
 + [cloud.google.com/speech-to-text/docs/](https://cloud.google.com/speech-to-text/docs/)
@@ -599,5 +603,7 @@ Here's a list of reference material I found helpful to get up to speed on speech
 + [analyticsvidhya.com/blog/2018/04/introduction-to-graph-theory-network-analysis-python-codes/](https://www.analyticsvidhya.com/blog/2018/04/introduction-to-graph-theory-network-analysis-python-codes/)
 + [harangdev.github.io/applied-data-science-with-python/applied-social-network-analysis-in-python/1/](https://harangdev.github.io/applied-data-science-with-python/applied-social-network-analysis-in-python/1/)
 + [neo4j.com/docs/graph-algorithms/current/algorithms/louvain/](https://neo4j.com/docs/graph-algorithms/current/algorithms/louvain/)
++ [textexture.com/](http://textexture.com/)
++ [JFK Photo by: Bob Gomel](https://cdn.hpm.io/wp-content/uploads/2012/09/11212000/JFK_front_podium.jpg). Image overlayed with network visualization
 
 Thanks for reading the post. Feel free to contact me with any feedback or questions.
