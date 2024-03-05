@@ -3,24 +3,23 @@ layout: page
 title: About
 permalink: /about/
 ---
-![Data Pipeline]({{ site.url }}/images/sf_gg.png)
+
 ### Hometown
 San Francisco Bay Area
 
 &nbsp; 
 
 ### Interests
-Technology, economics, data engineering, retail
-
-&nbsp; 
-
-### Random Info
-1. Favorite Running Shoes: New Balance 1400v6, Nike Zoom Fly
-2. Current Deadlift 1RM: 405lb - Oct2018
-3. LoL Main: Darius
+Technology, economics, data engineering, retail, running, fitness
 
 &nbsp; 
 
 ### Contact me
 
-[huck.joseph@gmail.com](mailto:huck.joseph@gmail.com)
+LinkedIn: [@josephhuck](https://www.linkedin.com/in/josephhuck/)
+
+Instagram: [@huck.joseph](https://www.instagram.com/huck.joseph/)
+
+Facebook: [@huck.joseph](https://www.facebook.com/joseph.huck)
+
+Email: [contact.joehuck@gmail.com](mailto:contact.joehuck@gmail.com)

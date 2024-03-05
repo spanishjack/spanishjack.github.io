@@ -3,10 +3,10 @@
 #
 
 # Name of your site (displayed in the header)
-name: Joseph Huck
+name: Joe Huck
 
 # Short bio or description (displayed in the header)
-description: personal blog
+description: personal website
 
 #
 # Flags below are optional
@@ -38,22 +38,22 @@ paginate: 5
 footer-links:
   behance: # https://www.behance.net/<username>
   dribbble:
-  email: huck.joseph@gmail.com
-  facebook:
+  email: contact.joehuck@gmail.com
+  facebook: joseph.huck
   flickr:
   github: spanishjack
   googleplus: # anything in your profile username that comes after plus.google.com/
-  instagram:
+  instagram: huck.joseph
   linkedin: josephhuck
   pinterest:
-  rss: x # just type anything here for a working RSS icon
+  #rss: x # just type anything here for a working RSS icon
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   tumblr: # https://<username>.tumblr.com
   #twitter: jekyllrb
   youtube: # channel/<your_long_string> or user/<user-name>
 
 # Text under the icons in footer
-footer-text: © Joseph Huck
+footer-text: © Joe Huck
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
@@ -64,7 +64,7 @@ google_analytics: UA-140936246-1
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url:
+url: joehuck.net
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
@@ -101,6 +101,7 @@ plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-paginate
+  - jekyll-seo-tag
 
 # Exclude these files from your production _site
 exclude:

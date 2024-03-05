@@ -13,7 +13,7 @@ tags:
 
 
 # Overview
-Are you shopping for a home in the SF Bay Area? Looking to move to the area for your next gig? If you've started your home search, your likely equal parts shocked, disgusted, and disallusioned. Don't worry. Your not alone. This post will give you a framework and data to help with your decision making process.
+The SF Bay Area housing market is insane. If you've started your home search, your likely equal parts shocked, disgusted, and disallusioned. Don't worry. Your not alone. This post will give you a framework and data to help with your decision making process.
 
 # Background
 Living in the SF Bay Area is all about trade-offs. Meeting your lifestyle goals will mean navigating several constraints. Want a short commute and access to high performing schools for your children? Get ready to pay an exhorbiant amount for housing costs. Looking to save money on housing? Prepare to sign up for a brutually long commute. You can't have it all.
