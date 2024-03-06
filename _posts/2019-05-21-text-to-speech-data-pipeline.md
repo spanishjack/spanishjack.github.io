@@ -14,7 +14,7 @@ Interested in learning how to build a simple speech-to-text data pipeline in a f
 I'll walk thru how to build a speech recognition data pipeline using python and the Google Clouds speech-to-text API. We'll touch on the basics of building a network graph from a text data source. And we’ll finish off by generating data visualizations using Gephi.
 
 By the end of this article you'll be able to generate neat graphs like the image below.
-![Data Pipeline]({{ site.url }}/images/speech_graph.png)
+![Data Pipeline](/images/speech_graph.png)
 
 # Backstory
 
@@ -29,7 +29,7 @@ After a few hours I had a simple speech-to-text analytics pipeline working. It w
 Hopefully this walkthru will save people time if they've got a similar use case.
 
 # Data Pipeline Overview
-![Data Pipeline]({{ site.url }}/images/pipeline.png)
+![Data Pipeline](/images/pipeline.png)
 
 Here are the high level steps we'll go thru to build out our data pipeline:
 + **Acquire the data.** Extracting audio from a youtube video via the youtube API.
@@ -176,12 +176,12 @@ The Google Cloud Speech-to-Text API has two processing methods. For audio source
 
 Setting up [Google Cloud Storage](https://cloud.google.com/products/storage/) only takes a few minutes. You'll need to sign-up for a Google Cloud account if you don't already have one. If you don't already have a Storage bucket setup, create one now. Save the name of your storage bucket. You will need it to access the API and upload the audio file.
 
-![Data Pipeline]({{ site.url }}/images/console.png)
+![Data Pipeline](/images/console.png)
 
 ## API Key
 You need to generate an API key to access the Google Cloud API. The can be done via the Google Cloud Console. After you generate the key, download the API key JSON file to your local machine.
 
-![Data Pipeline]({{ site.url }}/images/google_api.png)
+![Data Pipeline](/images/google_api.png)
 
 ## Enable the Speech-to-Text API
 You'll need to enable the speech to text API. Navigate to the Speech-to-Text API service and toggle the enable service switch.
@@ -226,7 +226,7 @@ upload_blob(gc_storage_bucket_name ,os.path.join(directory_path, output_file_nam
 
 
 Use Google Console to confirm the file has been uploaded. 
-![JFK Moon]({{ site.url }}/images/storage.png)
+![JFK Moon](/images/storage.png)
 
 # Audio Transcription
 At this point we're ready to invoke the Speech-to-Text API and transcribe our audio file. The function below, transcribe_gcs, takes the URI of the file that we loaded to Google Cloud Storage an input. The file URI should be in format gs://YOUR_BUCKET_NAME/YOUR_FILE_NAME.
@@ -303,18 +303,18 @@ with open(os.path.join(directory_path, output_text_file_name), 'w') as f:
 # Text Processing
 We've got our audio file transcription. It's time to start processing the text. For this article, our end goal is to produce a network visualization of the text. To achieve this, we need to transform the text to fit a network model. Specifically, an [undirected weighted graph](http://courses.cs.vt.edu/~cs3114/Fall10/Notes/T22.WeightedGraphs.pdf).
 
-![Network Graph]({{ site.url }}/images/node_edge.png)
+![Network Graph](/images/node_edge.png)
 
 For our text, each word will become a node (or vertex). The relationship between the words will be the edges. Our final data output will be an array mapping the nodes and edges, including the weight (frequency).
 
-![Network Graph Example]({{ site.url }}/images/node_edge_example.png)
+![Network Graph Example](/images/node_edge_example.png)
 
 For most of the text processing steps we'll be leveraging the excellent natural language toolkit (nltk) module.
 
 ## Sentence Tokenization
 The next steps are about splitting the text into smaller chunks. We need to end up with individual words to map our nodes and edges.
 
-![Text Token]({{ site.url }}/images/text_process.png)
+![Text Token](/images/text_process.png)
 
 Since we asked the Speech-to-Text API to add punctuation, there should be some level of punctuation available. We'll search each transcribed string in our output text for periods. If a period is detected, we'll use that to split the string into smaller tokens.
 
@@ -557,29 +557,29 @@ We're ready to visualize our data. If you haven't downloaded and installed Gephi
 ## Import GEXF File
 After you start Gephi, import the .gexf file we generated in the previous step.
 
-![Network0]({{ site.url }}/images/network0.png)
+![Network0](/images/network0.png)
 
 ## Generate Preview
 Go to the preview menu and run generate preview. At this point, you should see an incoherent jumble of black lines and dots.
 
-![Network1]({{ site.url }}/images/network1.png)
+![Network1](/images/network1.png)
 
 ## Add Node Partitioning
 In the appearance menu, click on node, node size, then partition. Click the drop down and choose the best community attribute. This will modify the color of the nodes based on the best community partition we derived earlier.
 
-![Network2]({{ site.url }}/images/network2.png)
+![Network2](/images/network2.png)
 
 ## Force Atlas Layout
 In the layout tab choose layout force atlas. Leave the default configurations. Hit run. You can stop it after a few seconds. This will rearrange the nodes based on the force layout algorithm. Feel free to play with the layouts or layout settings.
 
-![Network4]({{ site.url }}/images/network4.png)
+![Network4](/images/network4.png)
 
 ## Change Preview Preset
 Time to add some style. In the preview menu, change the style from default to black background. Feel free to use the default if you choose. The black layout looks cool though.
 
 After your done, click preview again. You should now have a graph output similar to the image below.
 
-![Network5]({{ site.url }}/images/network5.png)
+![Network5](/images/network5.png)
 
 At this point you've got a cool looking network visualization. You can start digging in to find insights about the text. Try playing with the various filters to reduce noise. For large texts, filtering out nodes based on their [degree](https://en.wikipedia.org/wiki/Degree_distribution) or centrality can help to reduce graph clutter. For networks with a lage number of nodes, filters are your friend.
 
@@ -590,7 +590,7 @@ Speech driven apps like Alexa and Siri are continuing to grow in popularity. Dem
 
 For reference, here's the full data viz image from the JFK moon speech.
 
-![Network5]({{ site.url }}/images/jfk_moon_network2.png)
+![Network5](/images/jfk_moon_network2.png)
 
 You can access the code used in this post at my github repo located [here](https://github.com/spanishjack/speechtotext).
 
