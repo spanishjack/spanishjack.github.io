@@ -4,17 +4,12 @@ title: About
 permalink: /about/
 ---
 
-### Hometown
+## Location
 San Francisco Bay Area
 
 &nbsp; 
 
-### Interests
-Technology, economics, data engineering, retail, running, fitness
-
-&nbsp; 
-
-### Contact me
+## Contact me
 
 LinkedIn: [@josephhuck](https://www.linkedin.com/in/josephhuck/)
 
