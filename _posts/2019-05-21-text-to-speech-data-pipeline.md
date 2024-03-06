@@ -7,7 +7,7 @@ tags:
   - code
   - data
 ---
-![Data Pipeline]({{ site.url }}/images/jfk_moon2.png)
+![Data Pipeline](/images/jfk_moon2.png)
 
 Interested in learning how to build a simple speech-to-text data pipeline in a few lines of code? Want to learn how to generate a beautiful data visualization to get insights into a speech or text? This article is for you.
 
