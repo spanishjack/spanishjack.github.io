@@ -59,7 +59,7 @@
   let hoverLayer = null;
   let visibleReadings = readings;
   let sliderIsDragging = false;
-  let pendingScrollRatio = 1;
+  let pendingScrollRatio = 0;
   let lastIsMobile = window.matchMedia("(max-width: 760px)").matches;
   let userSelectedRange = false;
 
