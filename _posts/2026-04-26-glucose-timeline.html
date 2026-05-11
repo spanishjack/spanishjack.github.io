@@ -19,9 +19,25 @@ permalink: /glucose/
     <div>
       <p class="glucose-kicker">March 2026</p>
       <h1 id="glucose-title">Blood Glucose Timeline</h1>
-      <p class="glucose-intro">I wore a Lingo continuous glucose monitor for 14 days in March 2026. The food journal and glucose readings are mapped below.</p>
+      <p class="glucose-intro">I wore a Lingo continuous glucose monitor for 14 days in March 2026. I am not diabetic, but I was interested to see if I could optimize my eating habits. I also had a few symptoms of low glucose during workouts over the past few months and wanted to troubleshoot. The food journal and glucose readings are mapped below.</p>
     </div>
-    <div class="glucose-range">
+  </section>
+
+  <section class="glucose-tldr" aria-labelledby="glucose-tldr-title">
+    <p class="glucose-kicker">TL;DR</p>
+    <h2 id="glucose-tldr-title">What I Learned</h2>
+    <ul>
+      <li>My blood glucose responses are mostly within normal range.</li>
+      <li>I did get hypoglycemic when eating fast-absorbing carbs before workouts. I have used this to change my pre- and post-workout eating schedule.</li>
+      <li>Refined carbs had a much bigger impact on glucose spikes than I previously understood.</li>
+      <li>Having a real-time monitor changed my behavior. I did not want to snack on a bag of chips that would impact my glucose score negatively.</li>
+      <li>I would definitely do this once a year going forward. It was fun.</li>
+    </ul>
+  </section>
+
+  <section class="glucose-controls" aria-label="Timeline controls">
+    <p class="timeline-note">Use the range buttons or slider to move through the 14-day period.</p>
+    <div class="glucose-range" aria-label="Visible timeline range">
       <button type="button" class="range-button" data-range-hours="6">6h</button>
       <button type="button" class="range-button" data-range-hours="12">12h</button>
       <button type="button" class="range-button" data-range-hours="24">1d</button>
@@ -29,9 +45,6 @@ permalink: /glucose/
       <button type="button" class="range-button is-active" data-range-hours="168" data-default-range>7d</button>
       <button type="button" class="range-button" data-range-hours="all">All</button>
     </div>
-  </section>
-
-  <section class="glucose-controls" aria-label="Timeline controls">
     <label class="timeline-control">
       <span id="timeline-slider-label">Timeline</span>
       <input
@@ -93,8 +106,9 @@ permalink: /glucose/
   <section class="food-response" aria-labelledby="food-response-title">
     <div class="food-response-header">
       <div>
-        <p class="glucose-kicker">2 hour window</p>
-        <h2 id="food-response-title">Food Glucose Response Summary</h2>
+        <h2 id="food-response-title">14-Day Food Journal</h2>
+        <p class="food-response-note">Glucose columns compare the reading at the start of each food entry with the highest reading in the next 2 hours.</p>
+        <p class="food-response-note">Start and ending glucose may be approximate because I was not always perfectly diligent about marking the exact eating time.</p>
       </div>
       <span id="food-response-count">--</span>
     </div>

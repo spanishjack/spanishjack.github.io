@@ -60,6 +60,7 @@
   let visibleReadings = readings;
   let sliderIsDragging = false;
   let pendingScrollRatio = 0;
+  let focusDate = minDate;
   let lastIsMobile = window.matchMedia("(max-width: 760px)").matches;
   let userSelectedRange = false;
 
@@ -133,8 +134,29 @@
     if (!sliderIsDragging) {
       timelineSlider.value = Math.round((scroll.scrollLeft / maxScroll) * Number(timelineSlider.max));
     }
+    focusDate = dateFromRatio(scroll.scrollLeft / maxScroll);
 
-    updateCrosshair();
+    updateCrosshair(focusDate);
+  }
+
+  function dateFromRatio(ratio) {
+    const clampedRatio = Math.max(0, Math.min(1, ratio));
+    return new Date(minDate.getTime() + clampedRatio * (maxDate.getTime() - minDate.getTime()));
+  }
+
+  function scrollToRatio(ratio) {
+    const maxScroll = Math.max(0, scroll.scrollWidth - scroll.clientWidth);
+    const clampedRatio = Math.max(0, Math.min(1, ratio));
+
+    focusDate = dateFromRatio(clampedRatio);
+
+    if (clampedRatio <= 0.001) {
+      scroll.scrollLeft = 0;
+    } else if (clampedRatio >= 0.999) {
+      scroll.scrollLeft = maxScroll;
+    } else {
+      scroll.scrollLeft = Math.round(clampedRatio * maxScroll);
+    }
   }
 
   function describeEvent(event) {
@@ -172,8 +194,7 @@
     if (!xScale || !yScale || !hoverLayer || !visibleReadings.length) return;
 
     const [start, end] = visibleDomain();
-    const midpoint = new Date((start.getTime() + end.getTime()) / 2);
-    const pointerDate = targetDate || midpoint;
+    const pointerDate = targetDate || focusDate;
     const clampedDate = new Date(Math.min(Math.max(pointerDate.getTime(), start.getTime()), end.getTime()));
     const nearest = visibleReadings[bisectReading(visibleReadings, clampedDate)];
 
@@ -190,7 +211,8 @@
 
     const bounds = scroll.getBoundingClientRect();
     const svgX = clientX - bounds.left + scroll.scrollLeft;
-    updateCrosshair(xScale.invert(svgX));
+    focusDate = xScale.invert(svgX);
+    updateCrosshair(focusDate);
   }
 
   function formatTableValue(value) {
@@ -416,7 +438,7 @@
       });
 
     const maxScrollAfter = Math.max(0, scroll.scrollWidth - scroll.clientWidth);
-    scroll.scrollLeft = Math.round(maxScrollAfter * scrollRatio);
+    scrollToRatio(scrollRatio);
     pendingScrollRatio = scroll.scrollLeft / Math.max(1, maxScrollAfter);
     updateViewportSummary();
   }
@@ -435,8 +457,7 @@
 
   timelineSlider.addEventListener("input", () => {
     sliderIsDragging = true;
-    const maxScroll = Math.max(0, scroll.scrollWidth - scroll.clientWidth);
-    scroll.scrollLeft = Math.round((Number(timelineSlider.value) / Number(timelineSlider.max)) * maxScroll);
+    scrollToRatio(Number(timelineSlider.value) / Number(timelineSlider.max));
     updateViewportSummary();
   });
   timelineSlider.addEventListener("change", () => {

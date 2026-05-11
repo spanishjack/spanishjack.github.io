@@ -45,10 +45,6 @@ body:has(.glucose-app) a {
 }
 
 .glucose-header {
-  align-items: end;
-  display: flex;
-  gap: 24px;
-  justify-content: space-between;
   margin-bottom: 18px;
 }
 
@@ -76,8 +72,38 @@ body:has(.glucose-app) a {
   text-transform: uppercase;
 }
 
+.glucose-tldr {
+  border-bottom: 1px solid #263241;
+  border-top: 1px solid #263241;
+  margin-bottom: 16px;
+  padding: 16px 0;
+}
+
+.glucose-tldr h2 {
+  color: #f0f6fc;
+  font-size: 22px;
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+
+.glucose-tldr ul {
+  color: #c9d1d9;
+  display: grid;
+  gap: 8px;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 780px;
+  padding-left: 20px;
+}
+
+.glucose-tldr li::marker {
+  color: #2f81f7;
+}
+
 .glucose-range {
   display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -114,6 +140,18 @@ body:has(.glucose-app) a {
   gap: 16px;
   margin-bottom: 16px;
   padding: 12px 0;
+}
+
+.timeline-note,
+.food-response-note {
+  color: #9da9b7;
+  font-size: 14px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.timeline-note {
+  flex: 1 0 100%;
 }
 
 .timeline-control {
@@ -365,6 +403,11 @@ body:has(.glucose-app) a {
   font-size: 24px;
   line-height: 1.2;
   margin: 0;
+}
+
+.food-response-note {
+  margin-top: 6px;
+  max-width: 680px;
 }
 
 #food-response-count {
