@@ -1,0 +1,119 @@
+---
+layout: post
+title: Blood Glucose Timeline
+tags:
+  - data
+  - health
+permalink: /glucose/
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/glucose-timeline.css">
+
+<main
+  class="glucose-app"
+  data-glucose-url="{{ site.baseurl }}/assets/data/glucose-readings.json"
+  data-events-url="{{ site.baseurl }}/assets/data/food-events.json"
+  data-response-url="{{ site.baseurl }}/assets/data/food-response-summary.json"
+>
+  <section class="glucose-header" aria-labelledby="glucose-title">
+    <div>
+      <p class="glucose-kicker">March 2026</p>
+      <h1 id="glucose-title">Blood Glucose Timeline</h1>
+      <p class="glucose-intro">I wore a Lingo continuous glucose monitor for 14 days in March 2026. The food journal and glucose readings are mapped below.</p>
+    </div>
+    <div class="glucose-range">
+      <button type="button" class="range-button" data-range-hours="6">6h</button>
+      <button type="button" class="range-button" data-range-hours="12">12h</button>
+      <button type="button" class="range-button" data-range-hours="24">1d</button>
+      <button type="button" class="range-button" data-range-hours="72">3d</button>
+      <button type="button" class="range-button is-active" data-range-hours="168" data-default-range>7d</button>
+      <button type="button" class="range-button" data-range-hours="all">All</button>
+    </div>
+  </section>
+
+  <section class="glucose-controls" aria-label="Timeline controls">
+    <label class="timeline-control">
+      <span id="timeline-slider-label">Timeline</span>
+      <input
+        id="timeline-slider"
+        type="range"
+        min="0"
+        max="1000"
+        value="1000"
+        aria-labelledby="timeline-slider-label"
+      >
+      <output id="timeline-window">--</output>
+    </label>
+  </section>
+
+  <section class="glucose-stats" aria-label="Visible window summary">
+    <div>
+      <span>Average</span>
+      <strong id="stat-average">--</strong>
+    </div>
+    <div>
+      <span>Range</span>
+      <strong id="stat-range">--</strong>
+    </div>
+    <div>
+      <span>Below 70</span>
+      <strong id="stat-low">--</strong>
+    </div>
+    <div>
+      <span>Above 140</span>
+      <strong id="stat-high">--</strong>
+    </div>
+    <div>
+      <span>Events</span>
+      <strong id="stat-events">--</strong>
+    </div>
+  </section>
+
+  <section class="timeline-shell" aria-label="Scrollable glucose and food timeline">
+    <div class="event-legend" aria-label="Event legend">
+      <span><i class="legend-swatch category-food"></i>Food</span>
+      <span><i class="legend-swatch category-drink"></i>Drink</span>
+    </div>
+    <svg id="glucose-y-axis" class="sticky-y-axis" aria-hidden="true"></svg>
+    <div id="timeline-scroll" class="timeline-scroll" tabindex="0">
+      <svg id="glucose-chart" role="img" aria-labelledby="glucose-chart-title">
+        <title id="glucose-chart-title">Blood glucose readings and food journal events over time</title>
+      </svg>
+    </div>
+  </section>
+
+  <section class="detail-panel" aria-live="polite">
+    <div>
+      <span id="detail-time">Hover the timeline</span>
+      <strong id="detail-primary">Glucose and journal details appear here.</strong>
+    </div>
+    <p id="detail-secondary"></p>
+  </section>
+
+  <section class="food-response" aria-labelledby="food-response-title">
+    <div class="food-response-header">
+      <div>
+        <p class="glucose-kicker">2 hour window</p>
+        <h2 id="food-response-title">Food Glucose Response Summary</h2>
+      </div>
+      <span id="food-response-count">--</span>
+    </div>
+    <div class="food-response-table-wrap">
+      <table class="food-response-table">
+        <thead>
+          <tr>
+            <th>Date / Time</th>
+            <th>Food Entry</th>
+            <th>Start Glucose</th>
+            <th>Highest Glucose in Next 2 Hours</th>
+            <th>Glucose Increase</th>
+          </tr>
+        </thead>
+        <tbody id="food-response-table-body"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="{{ site.baseurl }}/assets/js/glucose-timeline.js"></script>

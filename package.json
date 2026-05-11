@@ -1,0 +1,15 @@
+{
+  "name": "spanishjack-github-pages",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prepare:glucose": "node scripts/prepare-glucose-data.js",
+    "build": "rbenv exec bundle exec jekyll build",
+    "serve": "rbenv exec bundle exec jekyll serve",
+    "check": "node -c scripts/prepare-glucose-data.js && node -c assets/js/glucose-timeline.js && npm run build"
+  },
+  "engines": {
+    "node": ">=10.15.0",
+    "ruby": "3.3.0"
+  }
+}

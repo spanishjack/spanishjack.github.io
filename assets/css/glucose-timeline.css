@@ -1,0 +1,563 @@
+body:has(.glucose-app) {
+  background: #0f141b;
+}
+
+body:has(.glucose-app),
+body:has(.glucose-app) p,
+body:has(.glucose-app) a {
+  color: #c9d1d9;
+}
+
+.container:has(.glucose-app) {
+  max-width: 1180px;
+}
+
+.post:has(.glucose-app) > h1,
+.post:has(.glucose-app) > .meta,
+.post:has(.glucose-app) > [clsss="meta"],
+.post:has(.glucose-app) > .pagination,
+.post:has(.glucose-app) #disqus_thread {
+  display: none;
+}
+
+.wrapper-masthead:has(+ #main .glucose-app) {
+  background: #111923;
+  border-bottom: 1px solid #263241;
+  margin-bottom: 28px;
+}
+
+.wrapper-masthead:has(+ #main .glucose-app) .masthead {
+  border-bottom: 0;
+}
+
+.wrapper-masthead:has(+ #main .glucose-app) .site-name a,
+.wrapper-masthead:has(+ #main .glucose-app) nav a {
+  color: #d8e1eb;
+}
+
+.wrapper-masthead:has(+ #main .glucose-app) .site-description {
+  color: #8b9bad;
+}
+
+.glucose-app {
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.glucose-header {
+  align-items: end;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.glucose-header h1 {
+  color: #f0f6fc;
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.glucose-intro {
+  color: #aeb9c6;
+  font-size: 16px;
+  line-height: 1.45;
+  margin: 8px 0 0;
+  max-width: 640px;
+}
+
+.glucose-kicker {
+  color: #8b9bad;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+}
+
+.glucose-range {
+  display: flex;
+  gap: 8px;
+}
+
+.range-button {
+  align-items: center;
+  background: #151d27;
+  border: 1px solid #2a3646;
+  border-radius: 6px;
+  color: #c9d1d9;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  height: 34px;
+  justify-content: center;
+  min-width: 42px;
+  padding: 0 12px;
+}
+
+.range-button:hover,
+.range-button.is-active {
+  background: #2f81f7;
+  border-color: #2f81f7;
+  color: #fff;
+}
+
+.glucose-controls {
+  align-items: center;
+  border-bottom: 1px solid #263241;
+  border-top: 1px solid #263241;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 12px 0;
+}
+
+.timeline-control {
+  align-items: center;
+  color: #9da9b7;
+  display: grid;
+  flex: 1 1 520px;
+  font-size: 14px;
+  gap: 8px;
+  grid-template-columns: auto minmax(180px, 1fr) minmax(210px, auto);
+}
+
+.timeline-control input {
+  accent-color: #2f81f7;
+  width: 100%;
+}
+
+.timeline-control output {
+  color: #d8e1eb;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.glucose-stats {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-bottom: 18px;
+}
+
+.glucose-stats div {
+  border-left: 3px solid #2f81f7;
+  padding-left: 10px;
+}
+
+.glucose-stats span {
+  color: #8b9bad;
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.glucose-stats strong {
+  color: #f0f6fc;
+  display: block;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+.timeline-shell {
+  border: 1px solid #263241;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.event-legend {
+  align-items: center;
+  background: rgba(15, 20, 27, 0.82);
+  border: 1px solid #263241;
+  border-radius: 999px;
+  display: flex;
+  gap: 12px;
+  padding: 5px 8px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 5;
+}
+
+.event-legend span {
+  align-items: center;
+  color: #c9d1d9;
+  display: inline-flex;
+  font-size: 12px;
+  gap: 5px;
+}
+
+.legend-swatch {
+  border-radius: 999px;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+}
+
+.timeline-scroll {
+  background: linear-gradient(#111923, #0f141b);
+  min-height: 450px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  scrollbar-color: #465568 #151d27;
+}
+
+.sticky-y-axis {
+  background: linear-gradient(90deg, #111923 72%, rgba(17, 25, 35, 0));
+  display: block;
+  height: 450px;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 72px;
+  z-index: 4;
+}
+
+#glucose-chart {
+  display: block;
+  height: 450px;
+}
+
+.axis path,
+.axis line {
+  stroke: #334255;
+}
+
+.sticky-axis path,
+.sticky-axis line {
+  stroke: #4c5f78;
+}
+
+.axis text {
+  fill: #9da9b7;
+  font-size: 12px;
+}
+
+.sticky-axis text {
+  fill: #d8e1eb;
+  font-weight: 700;
+}
+
+.sticky-y-axis-bg {
+  fill: #111923;
+}
+
+.x-axis text {
+  font-size: 11px;
+  text-anchor: end;
+  transform: rotate(-45deg);
+}
+
+.grid line {
+  stroke: #223041;
+}
+
+.threshold-band-low {
+  fill: #7f1d1d;
+  opacity: 0.22;
+}
+
+.threshold-band-target {
+  fill: #14532d;
+  opacity: 0.2;
+}
+
+.threshold-band-high {
+  fill: #713f12;
+  opacity: 0.22;
+}
+
+.glucose-line {
+  fill: none;
+  stroke: #58a6ff;
+  stroke-linejoin: round;
+  stroke-width: 2.2;
+}
+
+.glucose-area {
+  fill: #58a6ff;
+  opacity: 0.08;
+}
+
+.event-stem {
+  opacity: 0.2;
+  cursor: pointer;
+  stroke-width: 10px;
+}
+
+.event-hit {
+  cursor: pointer;
+  fill: transparent;
+}
+
+.hover-line {
+  stroke: #f0f6fc;
+  stroke-dasharray: 3 4;
+  stroke-width: 1;
+}
+
+.hover-dot {
+  fill: #f0f6fc;
+  stroke: #0f141b;
+  stroke-width: 2;
+}
+
+.response-window {
+  fill: #a371f7;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.detail-panel {
+  align-items: start;
+  background: #151d27;
+  border: 1px solid #263241;
+  border-radius: 8px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(0, 1fr);
+  margin-top: 14px;
+  padding: 14px;
+}
+
+.detail-panel span {
+  color: #8b9bad;
+  display: block;
+  font-size: 13px;
+}
+
+.detail-panel strong {
+  color: #f0f6fc;
+  display: block;
+  font-size: 18px;
+  line-height: 1.35;
+  margin-top: 2px;
+}
+
+.detail-panel p {
+  color: #c9d1d9;
+  margin: 0;
+}
+
+.food-response {
+  margin-top: 28px;
+}
+
+.food-response-header {
+  align-items: end;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.food-response-header h2 {
+  color: #f0f6fc;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+#food-response-count {
+  color: #8b9bad;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.food-response-table-wrap {
+  border: 1px solid #263241;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.food-response-table {
+  border: 0;
+  border-collapse: collapse;
+  color: #c9d1d9;
+  font-size: 13px;
+  margin: 0;
+  min-width: 880px;
+  width: 100%;
+}
+
+.food-response-table th,
+.food-response-table td {
+  border: 0;
+  border-bottom: 1px solid #263241;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.food-response-table th {
+  background: #151d27;
+  color: #9da9b7;
+  font-size: 11px;
+  position: sticky;
+  text-transform: uppercase;
+  top: 0;
+  z-index: 1;
+}
+
+.food-response-table td:nth-child(3),
+.food-response-table td:nth-child(4),
+.food-response-table td:nth-child(5),
+.food-response-table th:nth-child(3),
+.food-response-table th:nth-child(4),
+.food-response-table th:nth-child(5) {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.food-response-table tbody tr:nth-child(odd) td,
+.food-response-table tbody tr:nth-child(odd) th {
+  background: #101821;
+}
+
+.food-response-table tbody tr:nth-child(even) td {
+  background: #0f141b;
+}
+
+.food-response-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.category-food {
+  fill: #ff9b54;
+  stroke: #ff9b54;
+}
+
+.category-drink {
+  fill: #3fb950;
+  stroke: #3fb950;
+}
+
+@media (max-width: 760px) {
+  .wrapper-masthead:has(+ #main .glucose-app) {
+    margin-bottom: 18px;
+  }
+
+  .glucose-header {
+    align-items: start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .glucose-range {
+    flex-wrap: wrap;
+  }
+
+  .range-button {
+    height: 32px;
+    min-width: 40px;
+    padding: 0 10px;
+  }
+
+  .glucose-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .glucose-stats div:nth-child(3),
+  .glucose-stats div:nth-child(4) {
+    display: none;
+  }
+
+  .timeline-shell,
+  .timeline-scroll,
+  .sticky-y-axis,
+  #glucose-chart {
+    min-height: 390px;
+    height: 390px;
+  }
+
+  .timeline-control {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-control output {
+    text-align: left;
+  }
+
+  .food-response-header {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .food-response-table-wrap {
+    border: 0;
+    overflow: visible;
+  }
+
+  .food-response-table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    min-width: 0;
+  }
+
+  .food-response-table thead {
+    display: none;
+  }
+
+  .food-response-table,
+  .food-response-table tbody,
+  .food-response-table tr,
+  .food-response-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .food-response-table tr {
+    background: #151d27;
+    border: 1px solid #263241;
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+
+  .food-response-table td {
+    background: transparent !important;
+    border-bottom: 0;
+    padding: 3px 0;
+  }
+
+  .food-response-table td:nth-child(1) {
+    color: #9da9b7;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .food-response-table td:nth-child(2) {
+    color: #f0f6fc;
+    font-size: 14px;
+    line-height: 1.35;
+    margin: 4px 0 7px;
+  }
+
+  .food-response-table td:nth-child(3),
+  .food-response-table td:nth-child(4),
+  .food-response-table td:nth-child(5) {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+  }
+
+  .food-response-table td:nth-child(3)::before,
+  .food-response-table td:nth-child(4)::before,
+  .food-response-table td:nth-child(5)::before {
+    color: #8b9bad;
+    content: attr(data-label);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}

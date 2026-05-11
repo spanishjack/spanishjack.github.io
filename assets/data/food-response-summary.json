@@ -1,0 +1,570 @@
+[
+  {
+    "timestamp": "2026-03-17T20:08-07:00",
+    "dateTime": "Tue, Mar 17, 8:08 PM PDT",
+    "foodEntry": "handful of nuts + pancakes, oranges, chicken sausage",
+    "startGlucose": 93,
+    "highestGlucoseNext2Hours": 135,
+    "glucoseIncrease": 42
+  },
+  {
+    "timestamp": "2026-03-18T07:02-07:00",
+    "dateTime": "Wed, Mar 18, 7:02 AM PDT",
+    "foodEntry": "nuts + yogurt and granola",
+    "startGlucose": 87,
+    "highestGlucoseNext2Hours": 111,
+    "glucoseIncrease": 24
+  },
+  {
+    "timestamp": "2026-03-18T09:39-07:00",
+    "dateTime": "Wed, Mar 18, 9:39 AM PDT",
+    "foodEntry": "banana",
+    "startGlucose": 99,
+    "highestGlucoseNext2Hours": 119,
+    "glucoseIncrease": 20
+  },
+  {
+    "timestamp": "2026-03-18T15:45-07:00",
+    "dateTime": "Wed, Mar 18, 3:45 PM PDT",
+    "foodEntry": "frosted mini wheats + pistachios",
+    "startGlucose": 93,
+    "highestGlucoseNext2Hours": 140,
+    "glucoseIncrease": 47
+  },
+  {
+    "timestamp": "2026-03-18T17:50-07:00",
+    "dateTime": "Wed, Mar 18, 5:50 PM PDT",
+    "foodEntry": "peanut bar, chips",
+    "startGlucose": 77,
+    "highestGlucoseNext2Hours": 119,
+    "glucoseIncrease": 42
+  },
+  {
+    "timestamp": "2026-03-18T19:36-07:00",
+    "dateTime": "Wed, Mar 18, 7:36 PM PDT",
+    "foodEntry": "chipotle chicken bowl + chips and guacamole",
+    "startGlucose": 108,
+    "highestGlucoseNext2Hours": 108,
+    "glucoseIncrease": 0
+  },
+  {
+    "timestamp": "2026-03-19T08:19-07:00",
+    "dateTime": "Thu, Mar 19, 8:19 AM PDT",
+    "foodEntry": "granola and Greek yogurt",
+    "startGlucose": 86,
+    "highestGlucoseNext2Hours": 116,
+    "glucoseIncrease": 30
+  },
+  {
+    "timestamp": "2026-03-19T11:25-07:00",
+    "dateTime": "Thu, Mar 19, 11:25 AM PDT",
+    "foodEntry": "peanut bar + 5 tortilla chips",
+    "startGlucose": 97,
+    "highestGlucoseNext2Hours": 132,
+    "glucoseIncrease": 35
+  },
+  {
+    "timestamp": "2026-03-19T14:33-07:00",
+    "dateTime": "Thu, Mar 19, 2:33 PM PDT",
+    "foodEntry": "Orange",
+    "startGlucose": 100,
+    "highestGlucoseNext2Hours": 132,
+    "glucoseIncrease": 32
+  },
+  {
+    "timestamp": "2026-03-19T15:53-07:00",
+    "dateTime": "Thu, Mar 19, 3:53 PM PDT",
+    "foodEntry": "Mixed nuts + sun chips",
+    "startGlucose": 117,
+    "highestGlucoseNext2Hours": 122,
+    "glucoseIncrease": 5
+  },
+  {
+    "timestamp": "2026-03-19T18:05-07:00",
+    "dateTime": "Thu, Mar 19, 6:05 PM PDT",
+    "foodEntry": "mixed nuts",
+    "startGlucose": 102,
+    "highestGlucoseNext2Hours": 102,
+    "glucoseIncrease": 0
+  },
+  {
+    "timestamp": "2026-03-19T19:26-07:00",
+    "dateTime": "Thu, Mar 19, 7:26 PM PDT",
+    "foodEntry": "cheese stick, mixed nuts + chicken curry, yams, potatoes, and avocado",
+    "startGlucose": 89,
+    "highestGlucoseNext2Hours": 92,
+    "glucoseIncrease": 3
+  },
+  {
+    "timestamp": "2026-03-20T08:24-07:00",
+    "dateTime": "Fri, Mar 20, 8:24 AM PDT",
+    "foodEntry": "vitamins",
+    "startGlucose": 94,
+    "highestGlucoseNext2Hours": 98,
+    "glucoseIncrease": 4
+  },
+  {
+    "timestamp": "2026-03-20T10:29-07:00",
+    "dateTime": "Fri, Mar 20, 10:29 AM PDT",
+    "foodEntry": "pistachios nuts",
+    "startGlucose": 95,
+    "highestGlucoseNext2Hours": 97,
+    "glucoseIncrease": 2
+  },
+  {
+    "timestamp": "2026-03-20T12:15-07:00",
+    "dateTime": "Fri, Mar 20, 12:15 PM PDT",
+    "foodEntry": "mini wheats + Orange, string cheese",
+    "startGlucose": 84,
+    "highestGlucoseNext2Hours": 132,
+    "glucoseIncrease": 48
+  },
+  {
+    "timestamp": "2026-03-20T14:47-07:00",
+    "dateTime": "Fri, Mar 20, 2:47 PM PDT",
+    "foodEntry": "yogurt and granola",
+    "startGlucose": 83,
+    "highestGlucoseNext2Hours": 114,
+    "glucoseIncrease": 31
+  },
+  {
+    "timestamp": "2026-03-20T16:51-07:00",
+    "dateTime": "Fri, Mar 20, 4:51 PM PDT",
+    "foodEntry": "peanut butter bar",
+    "startGlucose": 97,
+    "highestGlucoseNext2Hours": 107,
+    "glucoseIncrease": 10
+  },
+  {
+    "timestamp": "2026-03-20T20:23-07:00",
+    "dateTime": "Fri, Mar 20, 8:23 PM PDT",
+    "foodEntry": "Mediterranean chicken bowl",
+    "startGlucose": 87,
+    "highestGlucoseNext2Hours": 107,
+    "glucoseIncrease": 20
+  },
+  {
+    "timestamp": "2026-03-21T09:20-07:00",
+    "dateTime": "Sat, Mar 21, 9:20 AM PDT",
+    "foodEntry": "oatmeal and peanut  butter and blueberries",
+    "startGlucose": 87,
+    "highestGlucoseNext2Hours": 97,
+    "glucoseIncrease": 10
+  },
+  {
+    "timestamp": "2026-03-21T12:45-07:00",
+    "dateTime": "Sat, Mar 21, 12:45 PM PDT",
+    "foodEntry": "peanut bar + string cheese",
+    "startGlucose": 109,
+    "highestGlucoseNext2Hours": 119,
+    "glucoseIncrease": 10
+  },
+  {
+    "timestamp": "2026-03-21T15:17-07:00",
+    "dateTime": "Sat, Mar 21, 3:17 PM PDT",
+    "foodEntry": "orange",
+    "startGlucose": 89,
+    "highestGlucoseNext2Hours": 105,
+    "glucoseIncrease": 16
+  },
+  {
+    "timestamp": "2026-03-21T16:20-07:00",
+    "dateTime": "Sat, Mar 21, 4:20 PM PDT",
+    "foodEntry": "sprin drift can, small handful of mixed nuts",
+    "startGlucose": 90,
+    "highestGlucoseNext2Hours": 105,
+    "glucoseIncrease": 15
+  },
+  {
+    "timestamp": "2026-03-21T17:58-07:00",
+    "dateTime": "Sat, Mar 21, 5:58 PM PDT",
+    "foodEntry": "peanut pretzels",
+    "startGlucose": 82,
+    "highestGlucoseNext2Hours": 98,
+    "glucoseIncrease": 16
+  },
+  {
+    "timestamp": "2026-03-21T20:03-07:00",
+    "dateTime": "Sat, Mar 21, 8:03 PM PDT",
+    "foodEntry": "4 dates + pita chip + chicken meatballs, pasta, dates, avocado + Ice cream",
+    "startGlucose": 81,
+    "highestGlucoseNext2Hours": 126,
+    "glucoseIncrease": 45
+  },
+  {
+    "timestamp": "2026-03-22T09:15-07:00",
+    "dateTime": "Sun, Mar 22, 9:15 AM PDT",
+    "foodEntry": "yogurt, granola, mixed nuts, dates",
+    "startGlucose": 84,
+    "highestGlucoseNext2Hours": 101,
+    "glucoseIncrease": 17
+  },
+  {
+    "timestamp": "2026-03-22T10:55-07:00",
+    "dateTime": "Sun, Mar 22, 10:55 AM PDT",
+    "foodEntry": "dates",
+    "startGlucose": 92,
+    "highestGlucoseNext2Hours": 101,
+    "glucoseIncrease": 9
+  },
+  {
+    "timestamp": "2026-03-22T16:24-07:00",
+    "dateTime": "Sun, Mar 22, 4:24 PM PDT",
+    "foodEntry": "peanut butter crackers, string cheese",
+    "startGlucose": 80,
+    "highestGlucoseNext2Hours": 118,
+    "glucoseIncrease": 38
+  },
+  {
+    "timestamp": "2026-03-22T18:15-07:00",
+    "dateTime": "Sun, Mar 22, 6:15 PM PDT",
+    "foodEntry": "peanut butter crackers",
+    "startGlucose": 118,
+    "highestGlucoseNext2Hours": 118,
+    "glucoseIncrease": 0
+  },
+  {
+    "timestamp": "2026-03-22T19:52-07:00",
+    "dateTime": "Sun, Mar 22, 7:52 PM PDT",
+    "foodEntry": "chicken meatballs, potatoes and yam roasted, oranges, tomatoes sauce, oranges + ice cream",
+    "startGlucose": 112,
+    "highestGlucoseNext2Hours": 115,
+    "glucoseIncrease": 3
+  },
+  {
+    "timestamp": "2026-03-23T09:00-07:00",
+    "dateTime": "Mon, Mar 23, 9:00 AM PDT",
+    "foodEntry": "Banana",
+    "startGlucose": 80,
+    "highestGlucoseNext2Hours": 107,
+    "glucoseIncrease": 27
+  },
+  {
+    "timestamp": "2026-03-23T11:29-07:00",
+    "dateTime": "Mon, Mar 23, 11:29 AM PDT",
+    "foodEntry": "frosts mini wheats",
+    "startGlucose": 90,
+    "highestGlucoseNext2Hours": 129,
+    "glucoseIncrease": 39
+  },
+  {
+    "timestamp": "2026-03-23T13:25-07:00",
+    "dateTime": "Mon, Mar 23, 1:25 PM PDT",
+    "foodEntry": "rice, veggies, chicken",
+    "startGlucose": 116,
+    "highestGlucoseNext2Hours": 119,
+    "glucoseIncrease": 3
+  },
+  {
+    "timestamp": "2026-03-23T17:47-07:00",
+    "dateTime": "Mon, Mar 23, 5:47 PM PDT",
+    "foodEntry": "peanut butter crackers, orange, string cheese, nuts",
+    "startGlucose": 87,
+    "highestGlucoseNext2Hours": 121,
+    "glucoseIncrease": 34
+  },
+  {
+    "timestamp": "2026-03-23T20:06-07:00",
+    "dateTime": "Mon, Mar 23, 8:06 PM PDT",
+    "foodEntry": "chicken curry, avocado, sweet potato’s roasted",
+    "startGlucose": 99,
+    "highestGlucoseNext2Hours": 102,
+    "glucoseIncrease": 3
+  },
+  {
+    "timestamp": "2026-03-24T09:00-07:00",
+    "dateTime": "Tue, Mar 24, 9:00 AM PDT",
+    "foodEntry": "oatmeal and peanut butter, Greek yogurt",
+    "startGlucose": 87,
+    "highestGlucoseNext2Hours": 101,
+    "glucoseIncrease": 14
+  },
+  {
+    "timestamp": "2026-03-24T13:26-07:00",
+    "dateTime": "Tue, Mar 24, 1:26 PM PDT",
+    "foodEntry": "steak brisket",
+    "startGlucose": 96,
+    "highestGlucoseNext2Hours": 100,
+    "glucoseIncrease": 4
+  },
+  {
+    "timestamp": "2026-03-24T14:50-07:00",
+    "dateTime": "Tue, Mar 24, 2:50 PM PDT",
+    "foodEntry": "protein fit bar + mixed nuts and dates + peanut butter bar",
+    "startGlucose": 89,
+    "highestGlucoseNext2Hours": 102,
+    "glucoseIncrease": 13
+  },
+  {
+    "timestamp": "2026-03-24T18:59-07:00",
+    "dateTime": "Tue, Mar 24, 6:59 PM PDT",
+    "foodEntry": "mixed nuts + peanut butter crackers + mashed potatoes, chicken meatballs, avocado",
+    "startGlucose": 85,
+    "highestGlucoseNext2Hours": 89,
+    "glucoseIncrease": 4
+  },
+  {
+    "timestamp": "2026-03-25T08:50-07:00",
+    "dateTime": "Wed, Mar 25, 8:50 AM PDT",
+    "foodEntry": "Greek yogurt, granola, walnuts",
+    "startGlucose": 88,
+    "highestGlucoseNext2Hours": 93,
+    "glucoseIncrease": 5
+  },
+  {
+    "timestamp": "2026-03-25T20:08-07:00",
+    "dateTime": "Wed, Mar 25, 8:08 PM PDT",
+    "foodEntry": "chipotle chicken bowl",
+    "startGlucose": 99,
+    "highestGlucoseNext2Hours": 101,
+    "glucoseIncrease": 2
+  },
+  {
+    "timestamp": "2026-03-26T08:55-07:00",
+    "dateTime": "Thu, Mar 26, 8:55 AM PDT",
+    "foodEntry": "Greek yogurt, mixed nuts, granola",
+    "startGlucose": 83,
+    "highestGlucoseNext2Hours": 101,
+    "glucoseIncrease": 18
+  },
+  {
+    "timestamp": "2026-03-26T12:37-07:00",
+    "dateTime": "Thu, Mar 26, 12:37 PM PDT",
+    "foodEntry": "beef jerky + cat fish fillet, rice, plantain grilled, kale",
+    "startGlucose": 79,
+    "highestGlucoseNext2Hours": 121,
+    "glucoseIncrease": 42
+  },
+  {
+    "timestamp": "2026-03-26T15:00-07:00",
+    "dateTime": "Thu, Mar 26, 3:00 PM PDT",
+    "foodEntry": "peanut butter crackers + Orange, string cheese, dates, mixed nuts + mixed nuts",
+    "startGlucose": 86,
+    "highestGlucoseNext2Hours": 130,
+    "glucoseIncrease": 44
+  },
+  {
+    "timestamp": "2026-03-26T18:45-07:00",
+    "dateTime": "Thu, Mar 26, 6:45 PM PDT",
+    "foodEntry": "protein bar",
+    "startGlucose": 81,
+    "highestGlucoseNext2Hours": 100,
+    "glucoseIncrease": 19
+  },
+  {
+    "timestamp": "2026-03-26T20:08-07:00",
+    "dateTime": "Thu, Mar 26, 8:08 PM PDT",
+    "foodEntry": "yams and potatoes roasted, corn, chicken curry",
+    "startGlucose": 89,
+    "highestGlucoseNext2Hours": 102,
+    "glucoseIncrease": 13
+  },
+  {
+    "timestamp": "2026-03-27T08:05-07:00",
+    "dateTime": "Fri, Mar 27, 8:05 AM PDT",
+    "foodEntry": "Greek yogurt, granola, dates",
+    "startGlucose": 83,
+    "highestGlucoseNext2Hours": 134,
+    "glucoseIncrease": 51
+  },
+  {
+    "timestamp": "2026-03-27T10:50-07:00",
+    "dateTime": "Fri, Mar 27, 10:50 AM PDT",
+    "foodEntry": "string cheese",
+    "startGlucose": 90,
+    "highestGlucoseNext2Hours": 90,
+    "glucoseIncrease": 0
+  },
+  {
+    "timestamp": "2026-03-27T13:32-07:00",
+    "dateTime": "Fri, Mar 27, 1:32 PM PDT",
+    "foodEntry": "oatmeal and peanut butter",
+    "startGlucose": 89,
+    "highestGlucoseNext2Hours": 111,
+    "glucoseIncrease": 22
+  },
+  {
+    "timestamp": "2026-03-27T15:29-07:00",
+    "dateTime": "Fri, Mar 27, 3:29 PM PDT",
+    "foodEntry": "orange",
+    "startGlucose": 111,
+    "highestGlucoseNext2Hours": 125,
+    "glucoseIncrease": 14
+  },
+  {
+    "timestamp": "2026-03-27T18:55-07:00",
+    "dateTime": "Fri, Mar 27, 6:55 PM PDT",
+    "foodEntry": "banana, string cheese",
+    "startGlucose": 83,
+    "highestGlucoseNext2Hours": 92,
+    "glucoseIncrease": 9
+  },
+  {
+    "timestamp": "2026-03-27T20:05-07:00",
+    "dateTime": "Fri, Mar 27, 8:05 PM PDT",
+    "foodEntry": "chicken gyro bowl + ice cream",
+    "startGlucose": 79,
+    "highestGlucoseNext2Hours": 92,
+    "glucoseIncrease": 13
+  },
+  {
+    "timestamp": "2026-03-28T10:14-07:00",
+    "dateTime": "Sat, Mar 28, 10:14 AM PDT",
+    "foodEntry": "oatmeal and peanut butter",
+    "startGlucose": 90,
+    "highestGlucoseNext2Hours": 107,
+    "glucoseIncrease": 17
+  },
+  {
+    "timestamp": "2026-03-28T14:03-07:00",
+    "dateTime": "Sat, Mar 28, 2:03 PM PDT",
+    "foodEntry": "two eggs, orange, chicken sausage, toast",
+    "startGlucose": 89,
+    "highestGlucoseNext2Hours": 123,
+    "glucoseIncrease": 34
+  },
+  {
+    "timestamp": "2026-03-28T17:50-07:00",
+    "dateTime": "Sat, Mar 28, 5:50 PM PDT",
+    "foodEntry": "protein bar + mixed nuts",
+    "startGlucose": 91,
+    "highestGlucoseNext2Hours": 102,
+    "glucoseIncrease": 11
+  },
+  {
+    "timestamp": "2026-03-28T20:41-07:00",
+    "dateTime": "Sat, Mar 28, 8:41 PM PDT",
+    "foodEntry": "steak, carrots, green beans, potatoes",
+    "startGlucose": 99,
+    "highestGlucoseNext2Hours": 115,
+    "glucoseIncrease": 16
+  },
+  {
+    "timestamp": "2026-03-29T08:06-07:00",
+    "dateTime": "Sun, Mar 29, 8:06 AM PDT",
+    "foodEntry": "mixed nuts + oatmeal and peanut butter",
+    "startGlucose": 83,
+    "highestGlucoseNext2Hours": 93,
+    "glucoseIncrease": 10
+  },
+  {
+    "timestamp": "2026-03-29T10:08-07:00",
+    "dateTime": "Sun, Mar 29, 10:08 AM PDT",
+    "foodEntry": "string cheese",
+    "startGlucose": 79,
+    "highestGlucoseNext2Hours": 104,
+    "glucoseIncrease": 25
+  },
+  {
+    "timestamp": "2026-03-29T13:15-07:00",
+    "dateTime": "Sun, Mar 29, 1:15 PM PDT",
+    "foodEntry": "pickled carrots + two eggs, toast with peanut butter, orange",
+    "startGlucose": 92,
+    "highestGlucoseNext2Hours": 116,
+    "glucoseIncrease": 24
+  },
+  {
+    "timestamp": "2026-03-29T15:43-07:00",
+    "dateTime": "Sun, Mar 29, 3:43 PM PDT",
+    "foodEntry": "mixed nuts, dates",
+    "startGlucose": 96,
+    "highestGlucoseNext2Hours": 106,
+    "glucoseIncrease": 10
+  },
+  {
+    "timestamp": "2026-03-29T17:25-07:00",
+    "dateTime": "Sun, Mar 29, 5:25 PM PDT",
+    "foodEntry": "mixed nuts",
+    "startGlucose": 87,
+    "highestGlucoseNext2Hours": 93,
+    "glucoseIncrease": 6
+  },
+  {
+    "timestamp": "2026-03-29T20:03-07:00",
+    "dateTime": "Sun, Mar 29, 8:03 PM PDT",
+    "foodEntry": "peanut crackers + steak, brown rice, carrots, green beans",
+    "startGlucose": 95,
+    "highestGlucoseNext2Hours": 129,
+    "glucoseIncrease": 34
+  },
+  {
+    "timestamp": "2026-03-30T08:59-07:00",
+    "dateTime": "Mon, Mar 30, 8:59 AM PDT",
+    "foodEntry": "oatmeal and granola with pumpkin seeds",
+    "startGlucose": 88,
+    "highestGlucoseNext2Hours": 97,
+    "glucoseIncrease": 9
+  },
+  {
+    "timestamp": "2026-03-30T10:20-07:00",
+    "dateTime": "Mon, Mar 30, 10:20 AM PDT",
+    "foodEntry": "Banana",
+    "startGlucose": 89,
+    "highestGlucoseNext2Hours": 104,
+    "glucoseIncrease": 15
+  },
+  {
+    "timestamp": "2026-03-30T13:10-07:00",
+    "dateTime": "Mon, Mar 30, 1:10 PM PDT",
+    "foodEntry": "chicken, pinto beans, onions, cilantro, rice, guacamole",
+    "startGlucose": 88,
+    "highestGlucoseNext2Hours": 111,
+    "glucoseIncrease": 23
+  },
+  {
+    "timestamp": "2026-03-30T17:47-07:00",
+    "dateTime": "Mon, Mar 30, 5:47 PM PDT",
+    "foodEntry": "string cheese, pickled carrots, peanut crackers + orange + mixed nuts",
+    "startGlucose": 89,
+    "highestGlucoseNext2Hours": 110,
+    "glucoseIncrease": 21
+  },
+  {
+    "timestamp": "2026-03-30T20:11-07:00",
+    "dateTime": "Mon, Mar 30, 8:11 PM PDT",
+    "foodEntry": "chicken meatballs, marinara sauce, pasta, carrots + vanilla ice cream",
+    "startGlucose": 87,
+    "highestGlucoseNext2Hours": 111,
+    "glucoseIncrease": 24
+  },
+  {
+    "timestamp": "2026-03-31T08:54-07:00",
+    "dateTime": "Tue, Mar 31, 8:54 AM PDT",
+    "foodEntry": "Greek yogurt, pumpkin seeds, granola",
+    "startGlucose": 92,
+    "highestGlucoseNext2Hours": 99,
+    "glucoseIncrease": 7
+  },
+  {
+    "timestamp": "2026-03-31T13:21-07:00",
+    "dateTime": "Tue, Mar 31, 1:21 PM PDT",
+    "foodEntry": "chicken curry and rice with veggies",
+    "startGlucose": 96,
+    "highestGlucoseNext2Hours": 114,
+    "glucoseIncrease": 18
+  },
+  {
+    "timestamp": "2026-03-31T15:00-07:00",
+    "dateTime": "Tue, Mar 31, 3:00 PM PDT",
+    "foodEntry": "pistachios",
+    "startGlucose": 90,
+    "highestGlucoseNext2Hours": 94,
+    "glucoseIncrease": 4
+  },
+  {
+    "timestamp": "2026-03-31T18:08-07:00",
+    "dateTime": "Tue, Mar 31, 6:08 PM PDT",
+    "foodEntry": "orange, mixed nuts, string cheese",
+    "startGlucose": 87,
+    "highestGlucoseNext2Hours": 87,
+    "glucoseIncrease": 0
+  },
+  {
+    "timestamp": "2026-03-31T20:25-07:00",
+    "dateTime": "Tue, Mar 31, 8:25 PM PDT",
+    "foodEntry": "steak, chicken meatballs, carrots, potatoes, green beans",
+    "startGlucose": 87,
+    "highestGlucoseNext2Hours": null,
+    "glucoseIncrease": null
+  }
+]

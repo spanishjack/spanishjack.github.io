@@ -1,0 +1,702 @@
+[
+  {
+    "timestamp": "2026-03-17T20:08-07:00",
+    "entry": "handful of nuts",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-17T20:09-07:00",
+    "entry": "lime spindrift",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-17T20:52-07:00",
+    "entry": "pancakes, oranges, chicken sausage",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-18T07:02-07:00",
+    "entry": "nuts",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-18T07:40-07:00",
+    "entry": "start coffee and milk",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-18T07:52-07:00",
+    "entry": "yogurt and granola",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-18T09:39-07:00",
+    "entry": "banana",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-18T09:39-07:00",
+    "entry": "coffee done",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-18T11:27-07:00",
+    "entry": "green tea and honey",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-18T13:54-07:00",
+    "entry": "avocado, hummus, nuts, carrots, spindrift, cheese, 1 bag skinny popcorn",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-18T15:45-07:00",
+    "entry": "frosted mini wheats",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-18T16:00-07:00",
+    "entry": "tea + 1 tsp honey",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-18T16:39-07:00",
+    "entry": "pistachios",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-18T17:50-07:00",
+    "entry": "peanut bar, chips",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-18T19:36-07:00",
+    "entry": "chipotle chicken bowl + chips and guacamole",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-18T20:02-07:00",
+    "entry": "protein shake with 1/4 cup orange juice",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-19T07:03-07:00",
+    "entry": "nuts and coffee",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-19T08:19-07:00",
+    "entry": "granola and Greek yogurt",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-19T11:25-07:00",
+    "entry": "peanut bar",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-19T12:20-07:00",
+    "entry": "5 tortilla chips",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-19T13:05-07:00",
+    "entry": "Oatmeal with peanut butter, blueberries, and milk",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-19T14:33-07:00",
+    "entry": "Orange",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-19T15:53-07:00",
+    "entry": "Mixed nuts",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-19T16:09-07:00",
+    "entry": "sun chips",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-19T18:05-07:00",
+    "entry": "mixed nuts",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-19T19:05-07:00",
+    "entry": "not feeling great. Light headed",
+    "category": "note"
+  },
+  {
+    "timestamp": "2026-03-19T19:26-07:00",
+    "entry": "cheese stick, mixed nuts",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-19T20:00-07:00",
+    "entry": "protein shake",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-19T20:05-07:00",
+    "entry": "chicken curry, yams, potatoes, and avocado",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-20T07:44-07:00",
+    "entry": "oatmeal with peanut butter and black coffee",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-20T08:24-07:00",
+    "entry": "vitamins",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-20T09:10-07:00",
+    "entry": "decaf coffee and skim milk",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-20T10:29-07:00",
+    "entry": "pistachios nuts",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-20T12:15-07:00",
+    "entry": "mini wheats",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-20T13:15-07:00",
+    "entry": "Orange, string cheese",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-20T14:47-07:00",
+    "entry": "yogurt and granola",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-20T16:27-07:00",
+    "entry": "Waterloo zero calorie water",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-20T16:51-07:00",
+    "entry": "peanut butter bar",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-20T18:45-07:00",
+    "entry": "protein shake with 2 oz Orange juice",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-20T20:23-07:00",
+    "entry": "Mediterranean chicken bowl",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-21T08:30-07:00",
+    "entry": "mixed nuts and black coffee",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-21T09:20-07:00",
+    "entry": "oatmeal and peanut  butter and blueberries",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-21T12:45-07:00",
+    "entry": "peanut bar",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-21T13:06-07:00",
+    "entry": "string cheese",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-21T14:34-07:00",
+    "entry": "protein shake with orange juice, peanut butter pretzels",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-21T15:17-07:00",
+    "entry": "orange",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-21T16:20-07:00",
+    "entry": "sprin drift can, small handful of mixed nuts",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-21T16:45-07:00",
+    "entry": "spindrift",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-21T17:58-07:00",
+    "entry": "peanut pretzels",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-21T20:03-07:00",
+    "entry": "4 dates",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-21T20:28-07:00",
+    "entry": "pita chip",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-21T20:50-07:00",
+    "entry": "chicken meatballs, pasta, dates, avocado",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-21T21:04-07:00",
+    "entry": "Ice cream",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-22T08:19-07:00",
+    "entry": "mixed nuts and coffee with skim milk",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-22T09:15-07:00",
+    "entry": "yogurt, granola, mixed nuts, dates",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-22T10:55-07:00",
+    "entry": "dates",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-22T13:15-07:00",
+    "entry": "eggs, dates, avocado, spindrift lime , protein bar",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-22T16:24-07:00",
+    "entry": "peanut butter crackers, string cheese",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-22T18:15-07:00",
+    "entry": "peanut butter crackers",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-22T19:52-07:00",
+    "entry": "chicken meatballs, potatoes and yam roasted, oranges, tomatoes sauce, oranges",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-22T20:30-07:00",
+    "entry": "ice cream",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-23T07:15-07:00",
+    "entry": "coffee with milk, Greek yogurt with granola",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-23T09:00-07:00",
+    "entry": "Banana",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-23T11:29-07:00",
+    "entry": "frosts mini wheats",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-23T12:45-07:00",
+    "entry": "Gatorade",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-23T13:25-07:00",
+    "entry": "rice, veggies, chicken",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-23T15:56-07:00",
+    "entry": "pistachios and spindrift",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-23T17:47-07:00",
+    "entry": "peanut butter crackers, orange, string cheese, nuts",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-23T20:06-07:00",
+    "entry": "chicken curry, avocado, sweet potato’s roasted",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-24T07:23-07:00",
+    "entry": "coffee and milk, oatmeal and peanut butter",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-24T09:00-07:00",
+    "entry": "oatmeal and peanut butter, Greek yogurt",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-24T13:26-07:00",
+    "entry": "steak brisket",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-24T14:05-07:00",
+    "entry": "spindrift",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-24T14:50-07:00",
+    "entry": "protein fit bar",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-24T15:27-07:00",
+    "entry": "mixed nuts and dates",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-24T16:08-07:00",
+    "entry": "peanut butter bar",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-24T18:59-07:00",
+    "entry": "mixed nuts",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-24T19:59-07:00",
+    "entry": "peanut butter crackers",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-24T20:50-07:00",
+    "entry": "mashed potatoes, chicken meatballs, avocado",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-25T07:10-07:00",
+    "entry": "coffee with milk",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-25T08:50-07:00",
+    "entry": "Greek yogurt, granola, walnuts",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-25T12:53-07:00",
+    "entry": "chicken, guacamole, pinto beans, spindrift",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-25T13:55-07:00",
+    "entry": "mint candy and peppermint tea",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-25T16:01-07:00",
+    "entry": "nuts and lemon sparkling water",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-25T19:36-07:00",
+    "entry": "protein shake with orange juice",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-25T20:08-07:00",
+    "entry": "chipotle chicken bowl",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-26T07:09-07:00",
+    "entry": "coffee with milk, mixed nuts",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-26T08:55-07:00",
+    "entry": "Greek yogurt, mixed nuts, granola",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-26T09:08-07:00",
+    "entry": "coffee and milk",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-26T12:37-07:00",
+    "entry": "beef jerky",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-26T13:04-07:00",
+    "entry": "cat fish fillet, rice, plantain grilled, kale",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-26T15:00-07:00",
+    "entry": "peanut butter crackers",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-26T15:14-07:00",
+    "entry": "Orange, string cheese, dates, mixed nuts",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-26T15:57-07:00",
+    "entry": "mixed nuts",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-26T18:45-07:00",
+    "entry": "protein bar",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-26T20:08-07:00",
+    "entry": "yams and potatoes roasted, corn, chicken curry",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-27T07:00-07:00",
+    "entry": "coffee with milk",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-27T08:05-07:00",
+    "entry": "Greek yogurt, granola, dates",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-27T10:50-07:00",
+    "entry": "string cheese",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-27T13:16-07:00",
+    "entry": "protein shake",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-27T13:32-07:00",
+    "entry": "oatmeal and peanut butter",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-27T15:29-07:00",
+    "entry": "orange",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-27T18:55-07:00",
+    "entry": "banana, string cheese",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-27T20:05-07:00",
+    "entry": "chicken gyro bowl",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-27T20:20-07:00",
+    "entry": "ice cream",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-28T08:04-07:00",
+    "entry": "mixed nuts, coffee with milk",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-28T10:14-07:00",
+    "entry": "oatmeal and peanut butter",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-28T14:03-07:00",
+    "entry": "two eggs, orange, chicken sausage, toast",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-28T17:50-07:00",
+    "entry": "protein bar",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-28T18:17-07:00",
+    "entry": "mixed nuts",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-28T20:35-07:00",
+    "entry": "protein shake",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-28T20:41-07:00",
+    "entry": "steak, carrots, green beans, potatoes",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-29T08:06-07:00",
+    "entry": "mixed nuts",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-29T08:29-07:00",
+    "entry": "coffee with milk",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-29T08:52-07:00",
+    "entry": "oatmeal and peanut butter",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-29T10:08-07:00",
+    "entry": "string cheese",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-29T13:15-07:00",
+    "entry": "pickled carrots",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-29T13:25-07:00",
+    "entry": "two eggs, toast with peanut butter, orange",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-29T15:43-07:00",
+    "entry": "mixed nuts, dates",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-29T17:25-07:00",
+    "entry": "mixed nuts",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-29T19:55-07:00",
+    "entry": "mixed nuts, spindrift",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-29T20:03-07:00",
+    "entry": "peanut crackers",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-29T20:24-07:00",
+    "entry": "steak, brown rice, carrots, green beans",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-30T07:10-07:00",
+    "entry": "mixed nuts, coffee with milk",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-30T08:59-07:00",
+    "entry": "oatmeal and granola with pumpkin seeds",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-30T10:20-07:00",
+    "entry": "Banana",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-30T13:10-07:00",
+    "entry": "chicken, pinto beans, onions, cilantro, rice, guacamole",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-30T13:30-07:00",
+    "entry": "spindrift",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-30T17:47-07:00",
+    "entry": "string cheese, pickled carrots, peanut crackers",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-30T17:55-07:00",
+    "entry": "orange",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-30T18:45-07:00",
+    "entry": "mixed nuts",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-30T20:11-07:00",
+    "entry": "chicken meatballs, marinara sauce, pasta, carrots",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-30T20:29-07:00",
+    "entry": "vanilla ice cream",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-31T07:10-07:00",
+    "entry": "coffee with milk",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-31T08:54-07:00",
+    "entry": "Greek yogurt, pumpkin seeds, granola",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-31T10:30-07:00",
+    "entry": "pistachios, decaf coffee and milk",
+    "category": "drink"
+  },
+  {
+    "timestamp": "2026-03-31T13:21-07:00",
+    "entry": "chicken curry and rice with veggies",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-31T15:00-07:00",
+    "entry": "pistachios",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-31T18:08-07:00",
+    "entry": "orange, mixed nuts, string cheese",
+    "category": "food"
+  },
+  {
+    "timestamp": "2026-03-31T20:25-07:00",
+    "entry": "steak, chicken meatballs, carrots, potatoes, green beans",
+    "category": "food"
+  }
+]
