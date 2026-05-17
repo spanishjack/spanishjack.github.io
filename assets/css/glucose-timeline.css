@@ -80,6 +80,17 @@ body:has(.glucose-app) a {
   max-width: 760px;
 }
 
+.glucose-hero-image {
+  margin: 18px 0 20px;
+}
+
+.glucose-hero-image img {
+  border: 1px solid #263241;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+}
+
 .glucose-kicker {
   color: #8b9bad;
   font-size: 13px;
