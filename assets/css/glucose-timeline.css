@@ -160,6 +160,25 @@ body:has(.glucose-app) a {
   text-underline-offset: 3px;
 }
 
+.glucose-feature-image {
+  margin: 14px 0;
+  max-width: 520px;
+}
+
+.glucose-feature-image img {
+  border: 1px solid #263241;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+}
+
+.glucose-feature-image figcaption {
+  color: #9da9b7;
+  font-size: 13px;
+  line-height: 1.35;
+  margin-top: 6px;
+}
+
 .glucose-photo-grid {
   display: grid;
   gap: 14px;
