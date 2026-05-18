@@ -448,6 +448,18 @@ nav {
     margin-top: 10px;
   }
 
+  .post-preview-image {
+    display: block;
+    margin: 1em 0;
+
+    img {
+      aspect-ratio: 3 / 2;
+      margin: 0;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
   .read-more {
     font-size: 15px;
   }

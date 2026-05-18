@@ -29,6 +29,12 @@ layout: default
         </ul>
       </div>
 
+      {% if post.image %}
+        <a href="{{ site.baseurl }}{{ post.url }}" class="post-preview-image">
+          <img src="{{ site.baseurl }}{{ post.image }}" alt="">
+        </a>
+      {% endif %}
+
       <div class="entry">
         {{ post.excerpt }}
       </div>
